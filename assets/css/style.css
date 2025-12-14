@@ -12,53 +12,30 @@ html {
 }
 
 .container {
-  width: 100%;
   height: 100vh;
-  display: flex;
-  flex-direction: column;
 }
 
 /* Navbar Styles */
 .app-navbar {
-  width: 100%;
   height: 48px;
   background-color: #2a3f54;
-  display: flex;
-  align-items: center;
   padding: 0 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.navbar-content {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .navbar-left {
-  display: flex;
-  align-items: center;
   gap: 16px;
 }
 
 .navbar-search {
-  display: flex;
-  align-items: center;
   background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 4px;
   padding: 0 12px;
   height: 32px;
   width: 300px;
 }
 
 .search-input {
-  flex: 1;
-  border: none;
-  background: transparent;
   color: #ffffff;
-  font-size: 13px;
-  outline: none;
   margin-left: 8px;
 }
 
@@ -67,8 +44,6 @@ html {
 }
 
 .navbar-right {
-  display: flex;
-  align-items: center;
   gap: 16px;
 }
 
@@ -76,43 +51,24 @@ html {
   width: 40px;
   height: 40px;
   background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
-}
-
-/* Content Area */
-.content {
-  width: 100%;
-  flex: 1;
-  display: flex;
-  overflow: hidden;
 }
 
 /* Sidebar Styles */
 .app-sidebar {
   width: 233px;
-  height: 100%;
   background-color: #051529;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   overflow-y: auto;
 }
 
 .sidebar-menu {
   padding: 32px 12px 0;
-  flex: 1;
 }
 
 .menu-item {
   width: 209px;
   height: 40px;
-  display: flex;
-  align-items: center;
   padding: 0 12px;
   margin-bottom: 12px;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
 }
 
 .menu-item:hover {
@@ -126,10 +82,6 @@ html {
 .menu-icon {
   width: 24px;
   height: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
   filter: brightness(0) invert(1);
   opacity: 0.7;
 }
@@ -146,13 +98,8 @@ html {
 
 .menu-text {
   margin-left: 12px;
-  font-size: 14px;
-  font-weight: 500;
   line-height: 21px;
   color: #c5ccd5;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .menu-item.active .menu-text {
@@ -162,21 +109,14 @@ html {
 /* Sidebar Footer */
 .sidebar-footer {
   padding: 12px;
-  display: flex;
-  justify-content: center;
 }
 
 .shrink-button {
   width: 209px;
   height: 40px;
-  display: flex;
-  align-items: center;
   padding: 0 9px;
   background-color: rgba(255, 255, 255, 0.1);
   border: 1px solid #dee2e6;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
 }
 
 .shrink-button:hover {
@@ -187,61 +127,39 @@ html {
   width: 20px;
   height: 20px;
   background-color: #ffffff;
-  flex-shrink: 0;
 }
 
 .shrink-text {
   margin-left: 12px;
-  font-size: 14px;
-  font-weight: 500;
   line-height: 21px;
-  color: #ffffff;
 }
 
 /* Main Content Area */
 .main-content {
-  flex: 1;
   background-color: #f5f5f5;
   padding: 16px 24px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
 }
 
 /* Content Header */
 .content-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   margin-bottom: 22px;
 }
 
 .page-title {
-  font-size: 20px;
-  font-weight: 700;
   color: #1e2633;
   margin: 0;
   line-height: 30px;
 }
 
 .header-actions {
-  display: flex;
   gap: 0;
 }
 
 .btn-add-candidate {
-  display: flex;
-  align-items: center;
   gap: 8px;
   background-color: #2680eb;
-  color: #ffffff;
-  border: none;
   border-radius: 4px 0 0 4px;
   padding: 9px 13px;
-  font-size: 14px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: background-color 0.2s;
 }
 
 .btn-add-candidate:hover {
@@ -253,17 +171,10 @@ html {
 }
 
 .btn-dropdown {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background-color: #2680eb;
-  color: #ffffff;
-  border: none;
   border-left: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 0 4px 4px 0;
   padding: 9px 12px;
-  cursor: pointer;
-  transition: background-color 0.2s;
 }
 
 .btn-dropdown:hover {
@@ -276,23 +187,15 @@ html {
 
 /* Filter Section */
 .filter-section {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #ffffff;
   padding: 16px;
   margin-bottom: 0;
 }
 
 .search-box {
-  display: flex;
-  align-items: center;
   width: 300px;
   height: 36px;
   border: 1px solid #dddde4;
-  border-radius: 4px;
   padding: 0 8px;
-  background-color: #ffffff;
 }
 
 .search-icon-filter {
@@ -303,10 +206,6 @@ html {
 }
 
 .filter-search-input {
-  flex: 1;
-  border: none;
-  outline: none;
-  font-size: 14px;
   color: #1e2633;
 }
 
@@ -315,7 +214,6 @@ html {
 }
 
 .filter-actions {
-  display: flex;
   gap: 16px;
 }
 
@@ -323,13 +221,6 @@ html {
   width: 38px;
   height: 36px;
   border: 1px solid #e0e6ec;
-  border-radius: 4px;
-  background-color: #ffffff;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background-color 0.2s;
 }
 
 .filter-btn:hover {
@@ -344,27 +235,15 @@ html {
 
 /* Table Section */
 .table-container {
-  flex: 1;
   background-color: #ffffff;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-}
-
-.table-wrapper {
-  flex: 1;
-  overflow: auto;
 }
 
 .candidates-table {
-  width: 100%;
   min-width: 3000px;
   border-collapse: collapse;
-  font-size: 14px;
 }
 
 .candidates-table thead {
-  position: sticky;
   top: 0;
   z-index: 10;
 }
@@ -372,25 +251,18 @@ html {
 .candidates-table th {
   background-color: #f9fafb;
   color: #1e2633;
-  font-weight: 700;
-  text-align: left;
   padding: 14px 8px;
   border-bottom: 1px solid #ddd;
-  white-space: nowrap;
 }
 
 .candidates-table td {
   padding: 14px 8px;
   border-bottom: 1px solid #ddd;
   color: #1e2633;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .candidates-table tbody tr {
   background-color: #ffffff;
-  transition: background-color 0.2s;
 }
 
 .candidates-table tbody tr:hover {
@@ -434,28 +306,22 @@ html {
 
 /* Candidate Name */
 .candidate-name {
-  display: flex;
-  align-items: center;
   gap: 8px;
 }
 
 .avatar {
   width: 24px;
   height: 24px;
-  border-radius: 50%;
   background-color: #e0e6ec;
-  flex-shrink: 0;
 }
 
 /* Star Rating */
 .star-rating {
-  display: flex;
   gap: 2px;
 }
 
 .star {
   color: #d6d6d6;
-  font-size: 16px;
 }
 
 .star.filled {
@@ -464,21 +330,14 @@ html {
 
 /* Tags */
 .tag {
-  display: inline-block;
   padding: 2px 8px;
-  border-radius: 4px;
   background-color: #e0e6ec;
-  font-size: 12px;
   color: #1e2633;
 }
 
 /* Status */
 .status {
-  display: inline-block;
   padding: 4px 8px;
-  border-radius: 4px;
-  font-size: 12px;
-  font-weight: 500;
 }
 
 .status.active {
@@ -493,11 +352,7 @@ html {
 
 /* Offer Status */
 .offer-status {
-  display: inline-block;
   padding: 4px 8px;
-  border-radius: 4px;
-  font-size: 12px;
-  font-weight: 500;
 }
 
 .offer-status.pending {
@@ -513,8 +368,6 @@ html {
 /* Action Button */
 .action-btn {
   background: none;
-  border: none;
-  cursor: pointer;
   font-size: 18px;
   color: #7a8188;
   padding: 4px 8px;
@@ -526,27 +379,20 @@ html {
 
 /* Pagination Section */
 .pagination-section {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 16px;
   background-color: #f5f5f5;
   border-top: 1px solid #ddd;
 }
 
 .total-records {
-  font-size: 14px;
   color: #1e2633;
 }
 
 .pagination-controls {
-  display: flex;
-  align-items: center;
   gap: 8px;
 }
 
 .records-label {
-  font-size: 14px;
   color: #1e2633;
 }
 
@@ -554,29 +400,19 @@ html {
   width: 72px;
   height: 36px;
   border: 1px solid #e0e0e0;
-  border-radius: 4px;
   padding: 0 8px;
-  font-size: 14px;
   background-color: #ffffff;
-  cursor: pointer;
 }
 
 .page-info {
-  font-size: 14px;
   color: #1e2633;
 }
 
 .page-btn {
   width: 20px;
   height: 20px;
-  border: none;
   background: none;
-  cursor: pointer;
-  font-size: 16px;
   color: #7a8188;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .page-btn:hover:not(:disabled) {
@@ -585,5 +421,4 @@ html {
 
 .page-btn:disabled {
   opacity: 0.3;
-  cursor: not-allowed;
 }

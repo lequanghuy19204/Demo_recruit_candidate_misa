@@ -1,28 +1,227 @@
-/* Common Utility Classes */
-.display-flex {
+/* Display */
+.commons-display-flex {
   display: flex;
 }
 
-.justify-content-center {
-  justify-content: center;
+.commons-display-none {
+  display: none;
 }
 
-.align-items-center {
-  align-items: center;
+.commons-display-inline-block {
+  display: inline-block;
 }
 
-.flex-derctions-column {
+/* Flex Direction */
+.commons-flex-column {
   flex-direction: column;
 }
 
-.flex1 {
-  flex: 1;
+.commons-flex-row {
+  flex-direction: row;
 }
 
-.justify-content-between {
+/* Flex Alignment */
+.commons-align-center {
+  align-items: center;
+}
+
+.commons-justify-center {
+  justify-content: center;
+}
+
+.commons-justify-between {
   justify-content: space-between;
 }
 
-.align-center {
+/* Flex Combinations - Commonly Used */
+.commons-flex-center {
+  display: flex;
   align-items: center;
+}
+
+.commons-flex-center-all {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.commons-flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.commons-flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Flex Grow */
+.commons-flex-1 {
+  flex: 1;
+}
+
+.commons-flex-shrink-0 {
+  flex-shrink: 0;
+}
+
+/* Gap */
+.commons-gap-2 {
+  gap: 2px;
+}
+
+.commons-gap-8 {
+  gap: 8px;
+}
+
+.commons-gap-12 {
+  gap: 12px;
+}
+
+.commons-gap-16 {
+  gap: 16px;
+}
+
+/* Border Radius */
+.commons-rounded-4 {
+  border-radius: 4px;
+}
+
+.commons-rounded-full {
+  border-radius: 50%;
+}
+
+/* Cursor */
+.commons-pointer {
+  cursor: pointer;
+}
+
+.commons-cursor-not-allowed {
+  cursor: not-allowed;
+}
+
+/* Text */
+.commons-text-nowrap {
+  white-space: nowrap;
+}
+
+.commons-text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.commons-text-center {
+  text-align: center;
+}
+
+.commons-text-left {
+  text-align: left;
+}
+
+/* Font Size */
+.commons-fs-12 {
+  font-size: 12px;
+}
+
+.commons-fs-13 {
+  font-size: 13px;
+}
+
+.commons-fs-14 {
+  font-size: 14px;
+}
+
+.commons-fs-16 {
+  font-size: 16px;
+}
+
+.commons-fs-20 {
+  font-size: 20px;
+}
+
+/* Font Weight */
+.commons-fw-500 {
+  font-weight: 500;
+}
+
+.commons-fw-700 {
+  font-weight: 700;
+}
+
+/* Width & Height */
+.commons-w-full {
+  width: 100%;
+}
+
+.commons-h-full {
+  height: 100%;
+}
+
+/* Border */
+.commons-border-none {
+  border: none;
+}
+
+/* Background */
+.commons-bg-white {
+  background-color: #ffffff;
+}
+
+.commons-bg-transparent {
+  background: transparent;
+}
+
+/* Transition */
+.commons-transition-bg {
+  transition: background-color 0.2s;
+}
+
+.commons-transition-bg-ease {
+  transition: background-color 0.2s ease;
+}
+
+/* Overflow */
+.commons-overflow-hidden {
+  overflow: hidden;
+}
+
+.commons-overflow-auto {
+  overflow: auto;
+}
+
+/* Colors */
+.commons-color-primary {
+  color: #1e2633;
+}
+
+.commons-color-white {
+  color: #ffffff;
+}
+
+.commons-color-gray {
+  color: #7a8188;
+}
+
+.commons-bg-primary {
+  background-color: #2680eb;
+}
+
+.commons-bg-primary:hover {
+  background-color: #1a6ed8;
+}
+
+.commons-outline-none {
+  outline: none;
+}
+
+.commons-relative {
+  position: relative;
+}
+
+.commons-absolute {
+  position: absolute;
+}
+
+.commons-sticky {
+  position: sticky;
 }
