@@ -1,0 +1,195 @@
+/* Header */
+.icon-logo-header-left {
+  background: url("../icons/icon-logo.svg") no-repeat;
+  width: 32px;
+  height: 32px;
+}
+
+.icon-swich-app-white {
+  background: url("../icons/icon-swich-app-white.svg") no-repeat;
+  width: 24px;
+  height: 24px;
+}
+
+.icon-search {
+  background: url("../icons/ICON.svg") no-repeat -2px -658px;
+  width: 16px;
+  height: 16px;
+}
+
+.icon-notification-version-header-right {
+  background: url("../icons/icon-notification-version.svg") no-repeat;
+  width: 24px;
+  height: 24px;
+}
+
+.icon-store-header-right {
+  background: url("../icons/icon-store.svg") no-repeat;
+  width: 20px;
+  height: 20px;
+}
+
+.icon-user-controlpanel-header-right {
+  background: url("../icons/icon-user-controlpanel-item.svg") no-repeat;
+  width: 24px;
+  height: 24px;
+}
+
+.icon-messbox-header-right {
+  background: url("../icons/icon-messbox.svg") no-repeat;
+  width: 24px;
+  height: 24px;
+}
+
+.icon-notificationbox-header-right {
+  background: url("../icons/ICON.svg") no-repeat -212px -942px;
+  width: 20px;
+  height: 21px;
+}
+
+.icon-helpmenu-header-right {
+  background: url("../icons/ICON.svg") no-repeat -236px -942px;
+  width: 20px;
+  height: 20px;
+}
+
+.icon-moremenu-header-right {
+  background: url("../icons/ICON.svg") no-repeat -260px -942px;
+  width: 20px;
+  height: 20px;
+}
+
+.icon-knowledge-header-right {
+  background: url("../icons/icon-knowledge.svg") no-repeat;
+  width: 24px;
+  height: 24px;
+}
+
+/* Sidebar */
+.icon-sidebar-jobs {
+  background: url("../icons/ICON.svg") no-repeat -98px -114px;
+  width: 20px;
+  height: 20px;
+}
+
+.icon-sidebar-candidates {
+  background: url("../icons/ICON.svg") no-repeat -26px -114px;
+  width: 20px;
+  height: 19px;
+}
+
+.icon-sidebar-schedule {
+  background: url("../icons/ICON.svg") no-repeat -146px -114px;
+  width: 20px;
+  height: 20px;
+}
+
+.icon-sidebar-talent-pool {
+  background: url("../icons/ICON.svg") no-repeat -2px -114px;
+  width: 20px;
+  height: 20px;
+}
+
+.icon-sidebar-recruitment-campaign {
+  background: url("../icons/ICON.svg") no-repeat -338px -113px;
+  width: 20px;
+  height: 21px;
+}
+
+.icon-sidebar-tasks {
+  background: url("../icons/ICON.svg") no-repeat -338px -113px;
+  width: 20px;
+  height: 21px;
+}
+
+.icon-ai-marketing {
+  background: url("../icons/ICON.svg") no-repeat -162px -252px;
+  width: 20px;
+  height: 17px;
+}
+
+.icon-communication {
+  background: url("../icons/ICON.svg") no-repeat -75px -847px;
+  width: 18px;
+  height: 18px;
+}
+
+.icon-reports {
+  background: url("../icons/ICON.svg") no-repeat -73px -114px;
+  width: 21px;
+  height: 20px;
+}
+
+.icon-sidebar-settings {
+  background: url("../icons/ICON.svg") no-repeat -2px -138px;
+  width: 20px;
+  height: 20px;
+}
+
+.icon-left {
+  background: url("../icons/ICON.svg") no-repeat -66px -700px;
+  width: 7px;
+  height: 12px;
+}
+
+.icon-right {
+  background: url("../icons/ICON.svg") no-repeat -46px -700px;
+  width: 8px;
+  height: 12px;
+}
+
+/* Main content */
+.icon-add-candidate {
+  background: url("../icons/icon-add.svg") no-repeat;
+  width: 20px;
+  height: 20px;
+}
+
+.icon-down {
+  background: url("../icons/icon-down.svg") no-repeat;
+  width: 16px;
+  height: 16px;
+}
+
+.icon-ai-search-candidate {
+  background: url("../icons/icon-ai-search-candidate.svg") no-repeat;
+  width: 24px;
+  height: 24px;
+}
+
+.icon-filter {
+  background: url("../icons/ICON.svg") no-repeat -42px -658px;
+  width: 16px;
+  height: 16px;
+}
+
+.icon-export {
+  background: url("../icons/ICON.svg") no-repeat -62px -658px;
+  width: 16px;
+  height: 16px;
+}
+
+.icon-interactive-history {
+  background: url("../icons/ICON.svg") no-repeat -4px -849px;
+  width: 17px;
+  height: 15px;
+}
+
+.icon-setting-column {
+  background: url("../icons/ICON.svg") no-repeat -25px -609px;
+  width: 22px;
+  height: 22px;
+}
+
+/* Modal */
+.icon-close-modal {
+  background: url("../icons/ICON.svg") no-repeat -77px -141px;
+  width: 14px;
+  height: 14px;
+}
+
+.icon-plus-blue{
+  background: url("../icons/icon-plus-blue.svg") no-repeat;
+  width: 14px;
+  height: 14px;
+}

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/commons.css" />
+    <link rel="stylesheet" href="assets/css/icons.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <!-- Container -->
+    <div class="container">
+      <!-- Navbar -->
+      <div class="app-navbar">
+        <div class="navbar-content">
+          <div class="navbar-left">
+            <div class="icon-swich-app-white">
+              
+            </div>
+            <div class="icon-logo-header-left">
+             
+            </div>
+            <div class="navbar-search">
+              <div class="icon-search"></div>
+              <input type="text" class="search-input" placeholder="Search job, candidates, talents...">
+            </div>
+          </div>
+          <div class="navbar-right">
+            <div class="icon-notification-version-header-right"></div>
+            <div class="icon-store-header-right"></div>
+            <div class="icon-user-controlpanel-header-right"></div>
+            <div class="icon-messbox-header-right"></div>
+            <div class="icon-notificationbox-header-right"></div>
+            <div class="icon-helpmenu-header-right"></div>
+            <div class="icon-moremenu-header-right"></div>
+            <div class="icon-knowledge-header-right"></div>
+            <div class="navbar-user"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Content -->
+      <div class="content flex1">
+        <!-- Sidebar -->
+        <div class="app-sidebar">
+          <div class="sidebar-menu">
+            <div class="menu-item">
+              <span class="menu-icon icon-sidebar-jobs"></span>
+              <span class="menu-text">Jobs</span>
+            </div>
+            <div class="menu-item active">
+              <span class="menu-icon icon-sidebar-candidates"></span>
+              <span class="menu-text">Candidates</span>
+            </div>
+            <div class="menu-item">
+              <span class="menu-icon icon-sidebar-schedule"></span>
+              <span class="menu-text">Schedule</span>
+            </div>
+            <div class="menu-item">
+              <span class="menu-icon icon-sidebar-talent-pool"></span>
+              <span class="menu-text">Talent pool</span>
+            </div>
+            <div class="menu-item">
+              <span class="menu-icon icon-sidebar-recruitment-campaign"></span>
+              <span class="menu-text">Recruitment campaign</span>
+            </div>
+            <div class="menu-item">
+              <span class="menu-icon icon-sidebar-tasks"></span>
+              <span class="menu-text">Tasks</span>
+            </div>
+            <div class="menu-item">
+              <span class="menu-icon icon-ai-marketing"></span>
+              <span class="menu-text">aiMarketing</span>
+            </div>
+            <div class="menu-item">
+              <span class="menu-icon icon-communication"></span>
+              <span class="menu-text">Communication wit…</span>
+            </div>
+            <div class="menu-item">
+              <span class="menu-icon icon-reports"></span>
+              <span class="menu-text">Report</span>
+            </div>
+            <div class="menu-item">
+              <span class="menu-icon icon-sidebar-settings"></span>
+              <span class="menu-text">Settings</span>
+            </div>
+            <div class="menu-item">
+              <span class="menu-icon icon-knowledge-header-right"></span>
+              <span class="menu-text">Useful knowledge</span>
+            </div>
+          </div>
+          <div class="sidebar-footer">
+            <button class="shrink-button">
+              <span class="icon-left"></span>
+              <span class="shrink-text">Shrink</span>
+            </button>
+          </div>
+        </div>
+        <!-- Main content area -->
+        <div class="main-content">
+          <!-- Header Section -->
+          <div class="content-header">
+            <h1 class="page-title">Candidates</h1>
+            <div class="header-actions">
+              <button class="btn-add-candidate">
+                <span class="btn-icon icon-add-candidate"></span>
+                <span>Add candidate</span>
+              </button>
+              <button class="btn-dropdown">
+                <span class="dropdown-icon icon-down"></span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Filter Section -->
+          <div class="filter-section">
+            <div class="search-box">
+              <span class="icon-ai-search-candidate"></span>
+              <input type="text" placeholder="Quick Search or AI Assistant" class="filter-search-input" />
+            </div>
+            <div class="filter-actions">
+              <button class="filter-btn"><span class="icon-filter"></span></button>
+              <button class="filter-btn"><span class="icon-export"></span></button>
+              <button class="filter-btn"><span class="icon-interactive-history"></span></button>
+              <button class="filter-btn"><span class="icon-setting-column"></span></button>
+            </div>
+          </div>
+
+          <!-- Table Section -->
+          <div class="table-container">
+            <div class="table-wrapper">
+              <table class="candidates-table">
+                <thead>
+                  <tr>
+                    <th class="col-checkbox"><input type="checkbox" /></th>
+                    <th class="col-fullname">Full name</th>
+                    <th class="col-email">Email</th>
+                    <th class="col-phone">Phone number</th>
+                    <th class="col-campaign">Recruitment campaign</th>
+                    <th class="col-position">Recruiting position</th>
+                    <th class="col-jobs">Jobs</th>
+                    <th class="col-round">Recruitment round</th>
+                    <th class="col-review">Review</th>
+                    <th class="col-appdate">Application date</th>
+                    <th class="col-source">Candidate source</th>
+                    <th class="col-training">Training level</th>
+                    <th class="col-place">Training place</th>
+                    <th class="col-major">Major</th>
+                    <th class="col-workplace">Recent Workplace</th>
+                    <th class="col-recommend">Recommending staff</th>
+                    <th class="col-department">Using department</th>
+                    <th class="col-compat">Compatibility level</th>
+                    <th class="col-area">Area</th>
+                    <th class="col-referral">Referral</th>
+                    <th class="col-receipt">Receipt information</th>
+                    <th class="col-talent">In talent pool</th>
+                    <th class="col-portal">Candidate portal account</th>
+                    <th class="col-tag">Tag</th>
+                    <th class="col-status">Status</th>
+                    <th class="col-sex">Sex</th>
+                    <th class="col-dob">Date of birth</th>
+                    <th class="col-address">Address</th>
+                    <th class="col-reason">Reason</th>
+                    <th class="col-collab">Collaborators</th>
+                    <th class="col-receiptdate">Receipt date</th>
+                    <th class="col-offer">Job offer status</th>
+                    <th class="col-actions"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="col-checkbox"><input type="checkbox" /></td>
+                    <td class="col-fullname">
+                      <div class="candidate-name">
+                        <span class="avatar"></span>
+                        <span>Lê Thị Hồng</span>
+                      </div>
+                    </td>
+                    <td class="col-email">lnhung715100@gmail.com</td>
+                    <td class="col-phone">0868 961 699</td>
+                    <td class="col-campaign">--</td>
+                    <td class="col-position">Nhân viên quản trị nguồn…</td>
+                    <td class="col-jobs">Nhân viên quản trị…</td>
+                    <td class="col-round">Ứng tuyển</td>
+                    <td class="col-review">
+                      <div class="star-rating">
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                        <span class="star">★</span>
+                      </div>
+                    </td>
+                    <td class="col-appdate">12/10/2024</td>
+                    <td class="col-source">Website</td>
+                    <td class="col-training">Đại học</td>
+                    <td class="col-place">ĐH Bách Khoa HN</td>
+                    <td class="col-major">CNTT</td>
+                    <td class="col-workplace">FPT Software</td>
+                    <td class="col-recommend">--</td>
+                    <td class="col-department">Phòng IT</td>
+                    <td class="col-compat">85%</td>
+                    <td class="col-area">Hà Nội</td>
+                    <td class="col-referral">--</td>
+                    <td class="col-receipt">Đã nhận</td>
+                    <td class="col-talent">Có</td>
+                    <td class="col-portal">Active</td>
+                    <td class="col-tag"><span class="tag">Senior</span></td>
+                    <td class="col-status"><span class="status active">Đang xử lý</span></td>
+                    <td class="col-sex">Nữ</td>
+                    <td class="col-dob">15/05/1995</td>
+                    <td class="col-address">Cầu Giấy, Hà Nội</td>
+                    <td class="col-reason">--</td>
+                    <td class="col-collab">Nguyễn Văn A</td>
+                    <td class="col-receiptdate">10/10/2024</td>
+                    <td class="col-offer"><span class="offer-status pending">Chờ duyệt</span></td>
+                    <td class="col-actions"><button class="action-btn">⋮</button></td>
+                  </tr>
+                  <tr>
+                    <td class="col-checkbox"><input type="checkbox" /></td>
+                    <td class="col-fullname">
+                      <div class="candidate-name">
+                        <span class="avatar"></span>
+                        <span>Dương Thị Thảo</span>
+                      </div>
+                    </td>
+                    <td class="col-email">duongthao04tb@gmail.com</td>
+                    <td class="col-phone">091 1 6 50 119</td>
+                    <td class="col-campaign">--</td>
+                    <td class="col-position">Nhân viên quản trị nguồn…</td>
+                    <td class="col-jobs">Nhân viên quản trị…</td>
+                    <td class="col-round">Ứng tuyển</td>
+                    <td class="col-review">
+                      <div class="star-rating">
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                      </div>
+                    </td>
+                    <td class="col-appdate">08/11/2024</td>
+                    <td class="col-source">LinkedIn</td>
+                    <td class="col-training">Thạc sĩ</td>
+                    <td class="col-place">ĐH Kinh Tế QD</td>
+                    <td class="col-major">Quản trị KD</td>
+                    <td class="col-workplace">Viettel</td>
+                    <td class="col-recommend">Trần Văn B</td>
+                    <td class="col-department">Phòng HR</td>
+                    <td class="col-compat">92%</td>
+                    <td class="col-area">TP.HCM</td>
+                    <td class="col-referral">Có</td>
+                    <td class="col-receipt">Đã nhận</td>
+                    <td class="col-talent">Có</td>
+                    <td class="col-portal">Active</td>
+                    <td class="col-tag"><span class="tag">Manager</span></td>
+                    <td class="col-status"><span class="status success">Đã tuyển</span></td>
+                    <td class="col-sex">Nữ</td>
+                    <td class="col-dob">22/08/1990</td>
+                    <td class="col-address">Quận 1, TP.HCM</td>
+                    <td class="col-reason">--</td>
+                    <td class="col-collab">Lê Văn C</td>
+                    <td class="col-receiptdate">05/11/2024</td>
+                    <td class="col-offer"><span class="offer-status accepted">Đã chấp nhận</span></td>
+                    <td class="col-actions"><button class="action-btn">⋮</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Pagination Section -->
+          <div class="pagination-section">
+            <div class="total-records">Total: <strong>2</strong> record</div>
+            <div class="pagination-controls">
+              <span class="records-label">Number of records/page</span>
+              <select class="records-select">
+                <option value="25">25</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+              </select>
+              <span class="page-info">1 - 2 record</span>
+              <button class="page-btn prev" disabled>‹</button>
+              <button class="page-btn next">›</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
