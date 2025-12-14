@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="assets/css/commons.css" />
     <link rel="stylesheet" href="assets/css/icons.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/modal-add-candidate.css" />
   </head>
   <body>
     <!-- Container -->
@@ -226,7 +227,7 @@
                       </div>
                     </td>
                     <td class="col-email commons-text-nowrap commons-text-ellipsis">duongthao04tb@gmail.com</td>
-                    <td class="col-phone commons-text-nowrap commons-text-ellipsis">091 1 6 50 119</td>
+                    <td class="col-phone commons-text-nowrap commons-text-ellipsis">0911 650 119</td>
                     <td class="col-campaign commons-text-nowrap commons-text-ellipsis">--</td>
                     <td class="col-position commons-text-nowrap commons-text-ellipsis">Nhân viên quản trị nguồn…</td>
                     <td class="col-jobs commons-text-nowrap commons-text-ellipsis">Nhân viên quản trị…</td>
@@ -288,5 +289,368 @@
         </div>
       </div>
     </div>
+
+    <!-- Modal Add Candidate -->
+    <div class="modal-add-candidate-overlay commons-w-full commons-h-full commons-flex-center-all" id="modalAddCandidate">
+      <div class="modal-add-candidate commons-flex-col commons-rounded-4 commons-bg-white">
+        <div class="modal-add-candidate-header commons-flex-between">
+          <h2 class="modal-add-candidate-title commons-fw-700">Add candidate</h2>
+          <button class="modal-add-candidate-close commons-relative commons-flex-center-all commons-border-none commons-pointer" id="closeModalAddCandidate"></button>
+        </div>
+
+        <div class="modal-add-candidate-body commons-flex-1">
+          <div class="modal-add-candidate-upload-cv commons-w-full commons-flex-col commons-flex-center-all commons-pointer">
+            <span class="modal-add-candidate-upload-cv-text commons-fs-13">Drag and drop or click here to upload CV</span>
+            <span class="modal-add-candidate-upload-cv-hint commons-fs-13">Accept .pdf and .doc files (Size &lt; 15 Mb)</span>
+          </div>
+
+          <div class="modal-add-candidate-form commons-display-flex">
+            <div class="modal-add-candidate-avatar commons-rounded-full commons-flex-center-all commons-flex-shrink-0 commons-pointer">
+              <span class="modal-add-candidate-avatar-text commons-fs-13">Photo</span>
+            </div>
+
+            <div class="modal-add-candidate-fields commons-flex-1 commons-flex-col">
+              <label class="modal-add-candidate-label commons-fs-14 commons-fw-500 commons-color-primary commons-flex-center">
+                Full name <span class="modal-add-candidate-required">*</span>
+              </label>
+              <input type="text" class="modal-add-candidate-input commons-w-full commons-fs-14 commons-color-primary commons-outline-none commons-bg-white" placeholder="Enter full name" />
+
+              <div class="modal-add-candidate-row-labels commons-display-flex">
+                <div class="modal-add-candidate-row-label commons-flex-1 commons-flex-center">
+                  <span class="modal-add-candidate-row-label-text commons-fs-14 commons-fw-500 commons-color-primary">Date of birth</span>
+                  <span class="modal-add-candidate-row-label-hint commons-fs-14">Day month year</span>
+                </div>
+                <div class="modal-add-candidate-row-label commons-flex-1 commons-flex-center">
+                  <span class="modal-add-candidate-row-label-text commons-fs-14 commons-fw-500 commons-color-primary">Sex</span>
+                </div>
+              </div>
+              <div class="modal-add-candidate-row commons-display-flex">
+                <div class="modal-add-candidate-row-item commons-flex-1">
+                  <div class="modal-add-candidate-date-input commons-w-full commons-flex-center commons-rounded-4 commons-bg-white commons-overflow-hidden">
+                    <input type="text" placeholder="dd/MM/yyyy" class="commons-flex-1 commons-border-none commons-fs-14 commons-color-primary commons-outline-none commons-bg-transparent" />
+                    <div class="modal-add-candidate-date-input-icon commons-flex-center-all commons-pointer">
+                      <span class="modal-add-candidate-icon-calendar"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-add-candidate-row-item commons-flex-1">
+                  <div class="modal-add-candidate-select commons-w-full commons-flex-center commons-rounded-4 commons-bg-white commons-pointer commons-relative">
+                    <span class="modal-add-candidate-select-text commons-flex-1 commons-fs-14">Choose gender</span>
+                    <div class="modal-add-candidate-select-icon commons-flex-center-all">
+                      <div class="modal-add-candidate-icon-dropdown"></div>
+                    </div>
+                    <div class="modal-add-candidate-dropdown-menu">
+                      <div class="modal-add-candidate-dropdown-item">Male</div>
+                      <div class="modal-add-candidate-dropdown-item">Female</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <label class="modal-add-candidate-label commons-fs-14 commons-fw-500 commons-color-primary commons-flex-center">Area</label>
+              <div class="modal-add-candidate-area-wrapper commons-display-flex">
+                <div class="modal-add-candidate-area-select commons-flex-1 commons-flex-center commons-bg-white commons-pointer commons-relative">
+                  <span class="modal-add-candidate-area-select-text commons-flex-1 commons-fs-14">Select area</span>
+                  <div class="modal-add-candidate-area-select-icon commons-flex-center-all">
+                    <span class="modal-add-candidate-icon-dropdown"></span>
+                  </div>
+                  <div class="modal-add-candidate-dropdown-menu">
+                    <div class="modal-add-candidate-dropdown-item">Hà Nội</div>
+                    <div class="modal-add-candidate-dropdown-item">TP. Hồ Chí Minh</div>
+                    <div class="modal-add-candidate-dropdown-item">Đà Nẵng</div>
+                    <div class="modal-add-candidate-dropdown-item">Hải Phòng</div>
+                    <div class="modal-add-candidate-dropdown-item">Cần Thơ</div>
+                  </div>
+                </div>
+                <div class="modal-add-candidate-area-btn commons-flex-center-all commons-pointer">
+                  <span class="modal-add-candidate-icon-plus"></span>
+                </div>
+              </div>
+
+              <div class="modal-add-candidate-row-labels commons-display-flex">
+                <div class="modal-add-candidate-row-label commons-flex-1 commons-flex-center">
+                  <span class="modal-add-candidate-row-label-text commons-fs-14 commons-fw-500 commons-color-primary">Phone number</span>
+                </div>
+                <div class="modal-add-candidate-row-label commons-flex-1 commons-flex-center">
+                  <span class="modal-add-candidate-row-label-text commons-fs-14 commons-fw-500 commons-color-primary">Email</span>
+                </div>
+              </div>
+              <div class="modal-add-candidate-row commons-display-flex">
+                <div class="modal-add-candidate-row-item commons-flex-1">
+                  <input type="text" class="modal-add-candidate-input commons-w-full commons-fs-14 commons-color-primary commons-outline-none commons-bg-white" placeholder="Enter phone number" />
+                </div>
+                <div class="modal-add-candidate-row-item commons-flex-1">
+                  <input type="email" class="modal-add-candidate-input commons-w-full commons-fs-14 commons-color-primary commons-outline-none commons-bg-white" placeholder="Enter email" />
+                </div>
+              </div>
+
+              <label class="modal-add-candidate-label commons-fs-14 commons-fw-500 commons-color-primary commons-flex-center">Address</label>
+              <input type="text" class="modal-add-candidate-input commons-w-full commons-fs-14 commons-color-primary commons-outline-none commons-bg-white" placeholder="Enter address" />
+
+              <div class="modal-add-candidate-section-title commons-fs-14 commons-fw-500 commons-color-primary">EDUCATION</div>
+              <div class="modal-add-candidate-education">
+                <label class="modal-add-candidate-label commons-fs-14 commons-fw-500 commons-color-primary commons-flex-center">Training level</label>
+                <div class="modal-add-candidate-select commons-w-full commons-flex-center commons-rounded-4 commons-bg-white commons-pointer commons-relative">
+                  <span class="modal-add-candidate-select-text commons-flex-1 commons-fs-14">Select training level</span>
+                  <div class="modal-add-candidate-select-icon commons-flex-center-all">
+                    <span class="modal-add-candidate-icon-dropdown"></span>
+                  </div>
+                  <div class="modal-add-candidate-dropdown-menu">
+                    <div class="modal-add-candidate-dropdown-item">THPT</div>
+                    <div class="modal-add-candidate-dropdown-item">Trung cấp</div>
+                    <div class="modal-add-candidate-dropdown-item">Cao đẳng</div>
+                    <div class="modal-add-candidate-dropdown-item">Đại học</div>
+                    <div class="modal-add-candidate-dropdown-item">Thạc sĩ</div>
+                    <div class="modal-add-candidate-dropdown-item">Tiến sĩ</div>
+                  </div>
+                </div>
+
+                <div class="modal-add-candidate-row-labels commons-display-flex">
+                  <div class="modal-add-candidate-row-label commons-flex-1 commons-flex-center">
+                    <span class="modal-add-candidate-row-label-text commons-fs-14 commons-fw-500 commons-color-primary">Training place</span>
+                  </div>
+                  <div class="modal-add-candidate-row-label commons-flex-1 commons-flex-center">
+                    <span class="modal-add-candidate-row-label-text commons-fs-14 commons-fw-500 commons-color-primary">Major</span>
+                  </div>
+                </div>
+                <div class="modal-add-candidate-row commons-display-flex">
+                  <div class="modal-add-candidate-row-item commons-flex-1">
+                    <div class="modal-add-candidate-select commons-w-full commons-flex-center commons-rounded-4 commons-bg-white commons-pointer commons-relative">
+                      <span class="modal-add-candidate-select-text commons-flex-1 commons-fs-14">Select training place</span>
+                      <div class="modal-add-candidate-select-icon commons-flex-center-all">
+                        <span class="modal-add-candidate-icon-dropdown"></span>
+                      </div>
+                      <div class="modal-add-candidate-dropdown-menu">
+                        <div class="modal-add-candidate-dropdown-item">ĐH Bách Khoa Hà Nội</div>
+                        <div class="modal-add-candidate-dropdown-item">ĐH Kinh tế Quốc dân</div>
+                        <div class="modal-add-candidate-dropdown-item">ĐH Ngoại thương</div>
+                        <div class="modal-add-candidate-dropdown-item">ĐH FPT</div>
+                        <div class="modal-add-candidate-dropdown-item">ĐH Công nghệ - ĐHQGHN</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal-add-candidate-row-item commons-flex-1">
+                    <div class="modal-add-candidate-select commons-w-full commons-flex-center commons-rounded-4 commons-bg-white commons-pointer commons-relative">
+                      <span class="modal-add-candidate-select-text commons-flex-1 commons-fs-14">Select major</span>
+                      <div class="modal-add-candidate-select-icon commons-flex-center-all">
+                        <span class="modal-add-candidate-icon-dropdown"></span>
+                      </div>
+                      <div class="modal-add-candidate-dropdown-menu">
+                        <div class="modal-add-candidate-dropdown-item">Công nghệ thông tin</div>
+                        <div class="modal-add-candidate-dropdown-item">Kinh tế</div>
+                        <div class="modal-add-candidate-dropdown-item">Quản trị kinh doanh</div>
+                        <div class="modal-add-candidate-dropdown-item">Kế toán</div>
+                        <div class="modal-add-candidate-dropdown-item">Marketing</div>
+                        <div class="modal-add-candidate-dropdown-item">Nhân sự</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <button class="modal-add-candidate-btn-add-education commons-flex-center commons-rounded-4 commons-fs-14 commons-fw-500 commons-pointer commons-border-none">
+                  <span class="modal-add-candidate-icon-plus"></span>
+                  <span>Add education</span>
+                </button>
+              </div>
+
+              <div class="modal-add-candidate-row-labels commons-display-flex">
+                <div class="modal-add-candidate-row-label commons-flex-1 commons-flex-center">
+                  <span class="modal-add-candidate-row-label-text commons-fs-14 commons-fw-500 commons-color-primary">Application date</span>
+                </div>
+                <div class="modal-add-candidate-row-label commons-flex-1 commons-flex-center">
+                  <span class="modal-add-candidate-row-label-text commons-fs-14 commons-fw-500 commons-color-primary">Candidate source</span>
+                </div>
+              </div>
+              <div class="modal-add-candidate-row commons-display-flex">
+                <div class="modal-add-candidate-row-item commons-flex-1">
+                  <div class="modal-add-candidate-date-input commons-w-full commons-flex-center commons-rounded-4 commons-bg-white commons-overflow-hidden">
+                    <input type="text" placeholder="dd/MM/yyyy" class="commons-flex-1 commons-border-none commons-fs-14 commons-color-primary commons-outline-none commons-bg-transparent" />
+                    <div class="modal-add-candidate-date-input-icon commons-flex-center-all commons-pointer">
+                      <span class="modal-add-candidate-icon-calendar"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-add-candidate-row-item commons-flex-1">
+                  <div class="modal-add-candidate-select commons-w-full commons-flex-center commons-rounded-4 commons-bg-white commons-pointer commons-relative">
+                    <span class="modal-add-candidate-select-text commons-flex-1 commons-fs-14">Select source</span>
+                    <div class="modal-add-candidate-select-icon commons-flex-center-all">
+                      <span class="modal-add-candidate-icon-dropdown"></span>
+                    </div>
+                    <div class="modal-add-candidate-dropdown-menu">
+                      <div class="modal-add-candidate-dropdown-item">Website</div>
+                      <div class="modal-add-candidate-dropdown-item">LinkedIn</div>
+                      <div class="modal-add-candidate-dropdown-item">Facebook</div>
+                      <div class="modal-add-candidate-dropdown-item">Giới thiệu</div>
+                      <div class="modal-add-candidate-dropdown-item">TopCV</div>
+                      <div class="modal-add-candidate-dropdown-item">VietnamWorks</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="modal-add-candidate-row-labels commons-display-flex">
+                <div class="modal-add-candidate-row-label commons-flex-1 commons-flex-center">
+                  <span class="modal-add-candidate-row-label-text commons-fs-14 commons-fw-500 commons-color-primary">Recommending staff</span>
+                </div>
+                <div class="modal-add-candidate-row-label commons-flex-1 commons-flex-center">
+                  <span class="modal-add-candidate-row-label-text commons-fs-14 commons-fw-500 commons-color-primary">Collaborators</span>
+                </div>
+              </div>
+              <div class="modal-add-candidate-row commons-display-flex">
+                <div class="modal-add-candidate-row-item commons-flex-1">
+                  <div class="modal-add-candidate-select commons-w-full commons-flex-center commons-rounded-4 commons-bg-white commons-pointer commons-relative">
+                    <span class="modal-add-candidate-select-text commons-flex-1 commons-fs-14">Select staff</span>
+                    <div class="modal-add-candidate-select-icon commons-flex-center-all">
+                      <span class="modal-add-candidate-icon-dropdown"></span>
+                    </div>
+                    <div class="modal-add-candidate-dropdown-menu">
+                      <div class="modal-add-candidate-dropdown-item">Nguyễn Văn A</div>
+                      <div class="modal-add-candidate-dropdown-item">Trần Thị B</div>
+                      <div class="modal-add-candidate-dropdown-item">Lê Văn C</div>
+                      <div class="modal-add-candidate-dropdown-item">Phạm Thị D</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-add-candidate-row-item commons-flex-1">
+                  <div class="modal-add-candidate-select commons-w-full commons-flex-center commons-rounded-4 commons-bg-white commons-pointer commons-relative">
+                    <span class="modal-add-candidate-select-text commons-flex-1 commons-fs-14">Select collaborators</span>
+                    <div class="modal-add-candidate-select-icon commons-flex-center-all">
+                      <span class="modal-add-candidate-icon-dropdown"></span>
+                    </div>
+                    <div class="modal-add-candidate-dropdown-menu">
+                      <div class="modal-add-candidate-dropdown-item">Nguyễn Văn A</div>
+                      <div class="modal-add-candidate-dropdown-item">Trần Thị B</div>
+                      <div class="modal-add-candidate-dropdown-item">Lê Văn C</div>
+                      <div class="modal-add-candidate-dropdown-item">Phạm Thị D</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="modal-add-candidate-row-labels commons-display-flex">
+                <div class="modal-add-candidate-row-label commons-flex-1 commons-flex-center">
+                  <span class="modal-add-candidate-row-label-text commons-fs-14 commons-fw-500 commons-color-primary">Recent Workplace</span>
+                </div>
+                <div class="modal-add-candidate-row-label commons-flex-1 commons-flex-center">
+                  <span class="modal-add-candidate-row-label-text commons-fs-14 commons-fw-500 commons-color-primary">Workplace</span>
+                </div>
+              </div>
+              <div class="modal-add-candidate-row commons-display-flex">
+                <div class="modal-add-candidate-row-item commons-flex-1">
+                  <input type="text" class="modal-add-candidate-input commons-w-full commons-fs-14 commons-color-primary commons-outline-none commons-bg-white" placeholder="Enter recent workplace" />
+                </div>
+                <div class="modal-add-candidate-row-item commons-flex-1">
+                  <input type="text" class="modal-add-candidate-input commons-w-full commons-fs-14 commons-color-primary commons-outline-none commons-bg-white" placeholder="Enter workplace" />
+                </div>
+              </div>
+
+              <div class="modal-add-candidate-row-labels commons-display-flex">
+                <div class="modal-add-candidate-row-label commons-flex-1 commons-flex-center">
+                  <span class="modal-add-candidate-row-label-text commons-fs-14 commons-fw-500 commons-color-primary">Time</span>
+                  <span class="modal-add-candidate-row-label-hint commons-fs-14">From</span>
+                </div>
+                <div class="modal-add-candidate-row-label commons-flex-1 commons-flex-center">
+                  <span class="modal-add-candidate-row-label-text commons-fs-14 commons-fw-500 commons-color-primary"></span>
+                  <span class="modal-add-candidate-row-label-hint commons-fs-14">To</span>
+                </div>
+              </div>
+              <div class="modal-add-candidate-row commons-display-flex">
+                <div class="modal-add-candidate-row-item commons-flex-1">
+                  <div class="modal-add-candidate-date-input commons-w-full commons-flex-center commons-rounded-4 commons-bg-white commons-overflow-hidden">
+                    <input type="text" placeholder="dd/MM/yyyy" class="commons-flex-1 commons-border-none commons-fs-14 commons-color-primary commons-outline-none commons-bg-transparent" />
+                    <div class="modal-add-candidate-date-input-icon commons-flex-center-all commons-pointer">
+                      <span class="modal-add-candidate-icon-calendar"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-add-candidate-row-item commons-flex-1">
+                  <div class="modal-add-candidate-date-input commons-w-full commons-flex-center commons-rounded-4 commons-bg-white commons-overflow-hidden">
+                    <input type="text" placeholder="dd/MM/yyyy" class="commons-flex-1 commons-border-none commons-fs-14 commons-color-primary commons-outline-none commons-bg-transparent" />
+                    <div class="modal-add-candidate-date-input-icon commons-flex-center-all commons-pointer">
+                      <span class="modal-add-candidate-icon-calendar"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <label class="modal-add-candidate-label commons-fs-14 commons-fw-500 commons-color-primary commons-flex-center">Job position</label>
+              <input type="text" class="modal-add-candidate-input commons-w-full commons-fs-14 commons-color-primary commons-outline-none commons-bg-white" placeholder="Enter job position" />
+
+              <label class="modal-add-candidate-label commons-fs-14 commons-fw-500 commons-color-primary commons-flex-center">Task description</label>
+              <textarea class="modal-add-candidate-textarea commons-w-full commons-fs-14 commons-color-primary commons-outline-none commons-bg-white" placeholder="Enter task description" rows="3"></textarea>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-add-candidate-footer commons-display-flex commons-gap-12">
+          <button class="modal-add-candidate-btn modal-add-candidate-btn-cancel commons-rounded-4 commons-fs-14 commons-fw-500 commons-color-primary commons-bg-white commons-pointer" id="cancelModalAddCandidate">Cancel</button>
+          <button class="modal-add-candidate-btn modal-add-candidate-btn-save commons-rounded-4 commons-fs-14 commons-fw-500 commons-color-white commons-bg-primary commons-border-none commons-pointer">Save</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const modalAddCandidate = document.getElementById('modalAddCandidate');
+      const btnAddCandidate = document.querySelector('.btn-add-candidate');
+      const closeModalAddCandidate = document.getElementById('closeModalAddCandidate');
+      const cancelModalAddCandidate = document.getElementById('cancelModalAddCandidate');
+
+      function openModal() {
+        modalAddCandidate.classList.remove('commons-display-none');
+      }
+
+      function closeModal() {
+        modalAddCandidate.classList.add('commons-display-none');
+      }
+
+      btnAddCandidate.addEventListener('click', openModal);
+      closeModalAddCandidate.addEventListener('click', closeModal);
+      cancelModalAddCandidate.addEventListener('click', closeModal);
+
+      modalAddCandidate.addEventListener('click', function(e) {
+        if (e.target === modalAddCandidate) {
+          closeModal();
+        }
+      });
+
+      closeModal();
+
+      const dropdownSelects = document.querySelectorAll('.modal-add-candidate-select, .modal-add-candidate-area-select');
+      
+      dropdownSelects.forEach(select => {
+        select.addEventListener('click', function(e) {
+          e.stopPropagation();
+          
+          dropdownSelects.forEach(s => {
+            if (s !== select) s.classList.remove('active');
+          });
+          
+          this.classList.toggle('active');
+        });
+      });
+
+      const dropdownItems = document.querySelectorAll('.modal-add-candidate-dropdown-item');
+      
+      dropdownItems.forEach(item => {
+        item.addEventListener('click', function(e) {
+          e.stopPropagation();
+          
+          const select = this.closest('.modal-add-candidate-select, .modal-add-candidate-area-select');
+          const textEl = select.querySelector('.modal-add-candidate-select-text, .modal-add-candidate-area-select-text');
+          
+          select.querySelectorAll('.modal-add-candidate-dropdown-item').forEach(i => i.classList.remove('selected'));
+          this.classList.add('selected');
+          
+          textEl.textContent = this.textContent;
+          textEl.classList.add('has-value');
+          
+          select.classList.remove('active');
+        });
+      });
+
+      document.addEventListener('click', function() {
+        dropdownSelects.forEach(select => select.classList.remove('active'));
+      });
+    </script>
   </body>
 </html>

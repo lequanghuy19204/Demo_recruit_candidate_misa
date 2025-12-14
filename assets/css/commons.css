@@ -3,9 +3,6 @@
   display: flex;
 }
 
-.commons-display-none {
-  display: none;
-}
 
 .commons-display-inline-block {
   display: inline-block;
@@ -224,4 +221,8 @@
 
 .commons-sticky {
   position: sticky;
+}
+
+.commons-display-none {
+  display: none !important;
 }
