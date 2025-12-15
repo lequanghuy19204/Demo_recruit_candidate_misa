@@ -270,39 +270,107 @@ html {
 }
 
 /* Column widths */
-.col-checkbox { width: 50px; text-align: center; }
-.col-fullname { width: 167px; }
-.col-email { width: 217px; }
-.col-phone { width: 130px; }
-.col-campaign { width: 180px; }
-.col-position { width: 200px; }
-.col-jobs { width: 150px; }
-.col-round { width: 150px; }
-.col-review { width: 120px; }
-.col-appdate { width: 130px; }
-.col-source { width: 120px; }
-.col-training { width: 100px; }
-.col-place { width: 150px; }
-.col-major { width: 120px; }
-.col-workplace { width: 150px; }
-.col-recommend { width: 130px; }
-.col-department { width: 130px; }
-.col-compat { width: 100px; }
-.col-area { width: 100px; }
-.col-referral { width: 80px; }
-.col-receipt { width: 120px; }
-.col-talent { width: 100px; }
-.col-portal { width: 150px; }
-.col-tag { width: 100px; }
-.col-status { width: 120px; }
-.col-sex { width: 60px; }
-.col-dob { width: 110px; }
-.col-address { width: 180px; }
-.col-reason { width: 120px; }
-.col-collab { width: 130px; }
-.col-receiptdate { width: 110px; }
-.col-offer { width: 130px; }
-.col-actions { width: 80px; text-align: center; }
+.col-checkbox {
+  width: 50px;
+  text-align: center;
+}
+.col-fullname {
+  width: 167px;
+}
+.col-email {
+  width: 217px;
+}
+.col-phone {
+  width: 130px;
+}
+.col-campaign {
+  width: 180px;
+}
+.col-position {
+  width: 200px;
+}
+.col-jobs {
+  width: 150px;
+}
+.col-round {
+  width: 150px;
+}
+.col-review {
+  width: 120px;
+}
+.col-appdate {
+  width: 130px;
+}
+.col-source {
+  width: 120px;
+}
+.col-training {
+  width: 100px;
+}
+.col-place {
+  width: 150px;
+}
+.col-major {
+  width: 120px;
+}
+.col-workplace {
+  width: 150px;
+}
+.col-recommend {
+  width: 130px;
+}
+.col-department {
+  width: 130px;
+}
+.col-compat {
+  width: 100px;
+}
+.col-area {
+  width: 100px;
+}
+.col-referral {
+  width: 80px;
+}
+.col-receipt {
+  width: 120px;
+}
+.col-talent {
+  width: 100px;
+}
+.col-portal {
+  width: 150px;
+}
+.col-tag {
+  width: 100px;
+}
+.col-status {
+  width: 120px;
+}
+.col-sex {
+  width: 60px;
+}
+.col-dob {
+  width: 110px;
+}
+.col-address {
+  width: 180px;
+}
+.col-reason {
+  width: 120px;
+}
+.col-collab {
+  width: 130px;
+}
+.col-receiptdate {
+  width: 110px;
+}
+.col-offer {
+  width: 130px;
+}
+.col-actions {
+  width: 80px;
+  text-align: center;
+}
 
 /* Candidate Name */
 .candidate-name {

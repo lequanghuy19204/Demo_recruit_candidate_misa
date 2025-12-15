@@ -32,7 +32,7 @@
 
 .modal-add-candidate-close::before,
 .modal-add-candidate-close::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 16px;
   height: 2px;
@@ -370,5 +370,3 @@
 .modal-add-candidate-icon-dropdown {
   transition: transform 0.2s;
 }
-
-
