@@ -34,19 +34,19 @@ html {
 }
 
 .navbar-search {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: #F2F2F2;
   padding: 0 12px;
   height: 32px;
   width: 300px;
 }
 
 .search-input {
-  color: #ffffff;
+  color: black;
   margin-left: 8px;
 }
 
 .search-input::placeholder {
-  color: rgba(255, 255, 255, 0.6);
+  color: #9EA7BC;
 }
 
 .navbar-right {
@@ -252,8 +252,9 @@ html {
 }
 
 .candidates-table {
-  min-width: 3000px;
+  min-width: 5500px;
   border-collapse: collapse;
+  table-layout: fixed;
 }
 
 .candidates-table thead {
@@ -272,6 +273,10 @@ html {
   padding: 14px 8px;
   border-bottom: 1px solid #ddd;
   color: #1e2633;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 0;
 }
 
 .candidates-table tbody tr {
@@ -284,105 +289,196 @@ html {
 
 /* Column widths */
 .col-checkbox {
-  width: 50px;
+  width: 60px;
+  min-width: 60px;
   text-align: center;
+  position: sticky;
+  left: 0;
+  z-index: 2;
+  background-color: inherit;
+}
+
+.candidates-table thead .col-checkbox {
+  background-color: #f9fafb;
+  z-index: 11;
+}
+
+.candidates-table tbody .col-checkbox {
+  background-color: #ffffff;
+}
+
+.candidates-table tbody tr:hover .col-checkbox {
+  background-color: #e1eeff;
 }
 .col-fullname {
-  width: 167px;
+  width: 200px;
+  min-width: 200px;
 }
 .col-email {
-  width: 217px;
+  width: 250px;
+  min-width: 250px;
 }
 .col-phone {
-  width: 130px;
+  width: 160px;
+  min-width: 160px;
 }
 .col-campaign {
-  width: 180px;
+  width: 220px;
+  min-width: 220px;
 }
 .col-position {
-  width: 200px;
+  width: 240px;
+  min-width: 240px;
 }
 .col-jobs {
-  width: 150px;
+  width: 200px;
+  min-width: 200px;
 }
 .col-round {
-  width: 150px;
+  width: 180px;
+  min-width: 180px;
 }
 .col-review {
-  width: 120px;
+  width: 150px;
+  min-width: 150px;
 }
 .col-appdate {
-  width: 130px;
+  width: 160px;
+  min-width: 160px;
 }
 .col-source {
-  width: 120px;
+  width: 160px;
+  min-width: 160px;
 }
 .col-training {
-  width: 100px;
+  width: 150px;
+  min-width: 150px;
 }
 .col-place {
-  width: 150px;
+  width: 200px;
+  min-width: 200px;
 }
 .col-major {
-  width: 120px;
+  width: 180px;
+  min-width: 180px;
 }
 .col-workplace {
-  width: 150px;
+  width: 200px;
+  min-width: 200px;
 }
 .col-recommend {
-  width: 130px;
+  width: 180px;
+  min-width: 180px;
 }
 .col-department {
-  width: 130px;
+  width: 180px;
+  min-width: 180px;
 }
 .col-compat {
-  width: 100px;
+  width: 150px;
+  min-width: 150px;
 }
 .col-area {
-  width: 100px;
+  width: 150px;
+  min-width: 150px;
 }
 .col-referral {
-  width: 80px;
+  width: 120px;
+  min-width: 120px;
 }
 .col-receipt {
-  width: 120px;
+  width: 160px;
+  min-width: 160px;
 }
 .col-talent {
-  width: 100px;
+  width: 150px;
+  min-width: 150px;
 }
 .col-portal {
-  width: 150px;
+  width: 200px;
+  min-width: 200px;
 }
 .col-tag {
-  width: 100px;
+  width: 150px;
+  min-width: 150px;
 }
 .col-status {
-  width: 120px;
+  width: 160px;
+  min-width: 160px;
 }
 .col-sex {
-  width: 60px;
+  width: 100px;
+  min-width: 100px;
 }
 .col-dob {
-  width: 110px;
+  width: 140px;
+  min-width: 140px;
 }
 .col-address {
-  width: 180px;
+  width: 250px;
+  min-width: 250px;
 }
 .col-reason {
-  width: 120px;
+  width: 180px;
+  min-width: 180px;
 }
 .col-collab {
-  width: 130px;
+  width: 180px;
+  min-width: 180px;
 }
 .col-receiptdate {
-  width: 110px;
+  width: 150px;
+  min-width: 150px;
 }
 .col-offer {
-  width: 130px;
+  width: 180px;
+  min-width: 180px;
 }
 .col-actions {
   width: 80px;
+  min-width: 80px;
   text-align: center;
+  position: sticky;
+  right: 0;
+  z-index: 2;
+  background-color: inherit;
+}
+
+.candidates-table thead .col-actions {
+  background-color: #f9fafb;
+  z-index: 11;
+}
+
+.candidates-table tbody .col-actions {
+  background-color: #ffffff;
+}
+
+.candidates-table tbody tr:hover .col-actions {
+  background-color: #e1eeff;
+}
+
+/* Action Buttons */
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.action-btn-edit,
+.action-btn-delete {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.action-btn-edit:hover,
+.action-btn-delete:hover {
+  background-color: #e0e6ec;
 }
 
 /* Candidate Name */

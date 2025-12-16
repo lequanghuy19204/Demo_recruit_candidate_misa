@@ -196,6 +196,18 @@
   height: 22px;
 }
 
+.icon-edit {
+  background: url("../icons/ICON.svg") no-repeat -182px -658px;
+  width: 17px;
+  height: 16px;
+}
+
+.icon-delete {
+  background: url("../icons/ICON.svg") no-repeat -222px -658px;
+  width: 16px;
+  height: 16px;
+}
+
 /* Modal */
 .icon-close-modal {
   background: url("../icons/ICON.svg") no-repeat -77px -141px;
