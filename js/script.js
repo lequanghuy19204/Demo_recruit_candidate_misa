@@ -29,7 +29,10 @@ window.addEventListener("load", loadCandidates);
 // Sidebar toggle
 const sidebar = document.querySelector(".app-sidebar");
 const shrinkBtn = document.querySelector(".shrink-button");
+const shrinkIcon = shrinkBtn.querySelector(".icon-left");
 
 shrinkBtn.addEventListener("click", function () {
   sidebar.classList.toggle("collapsed");
+  shrinkIcon.classList.toggle("icon-left");
+  shrinkIcon.classList.toggle("icon-right");
 });
