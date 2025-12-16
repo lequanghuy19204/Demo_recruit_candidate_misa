@@ -5,6 +5,13 @@
   height: 32px;
 }
 
+.icon-logo-backgroud {
+  background: url("https://amisplatform.misacdn.net/apps/recruit/navbar-bg-noel.ff04816e6511986f.svg")
+    no-repeat;
+  width: 199px;
+  height: 49px;
+}
+
 .icon-swich-app-white {
   background: url("../icons/icon-swich-app-white.svg") no-repeat;
   width: 24px;
@@ -66,6 +73,14 @@
 }
 
 /* Sidebar */
+
+/* Chua su ly */
+.icon-sidebar-background {
+  background: url("../icons/icon-sidebar-background.svg") no-repeat;
+  width: 199px;
+  height: 49px;
+}
+
 .icon-sidebar-jobs {
   background: url("../icons/ICON.svg") no-repeat -98px -114px;
   width: 20px;
