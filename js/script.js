@@ -25,3 +25,11 @@ document
 
 // Load candidates on page load
 window.addEventListener("load", loadCandidates);
+
+// Sidebar toggle
+const sidebar = document.querySelector(".app-sidebar");
+const shrinkBtn = document.querySelector(".shrink-button");
+
+shrinkBtn.addEventListener("click", function () {
+  sidebar.classList.toggle("collapsed");
+});

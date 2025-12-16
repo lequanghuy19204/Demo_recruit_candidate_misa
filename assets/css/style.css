@@ -34,7 +34,7 @@ html {
 }
 
 .navbar-search {
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   padding: 0 12px;
   height: 32px;
   width: 300px;
@@ -46,7 +46,7 @@ html {
 }
 
 .search-input::placeholder {
-  color: #9EA7BC;
+  color: #9ea7bc;
 }
 
 .navbar-right {
@@ -54,8 +54,8 @@ html {
 }
 
 .navbar-user {
-  width: 40px;
-  height: 40px;
+  width: 32px;
+  height: 32px;
   background-color: rgba(255, 255, 255, 0.1);
 }
 
@@ -71,10 +71,22 @@ html {
   width: 233px;
   background-color: #051529;
   overflow-y: auto;
+  position: relative;
+}
+
+.sidebar-bg-image {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.5;
 }
 
 .sidebar-menu {
   padding: 32px 12px 0;
+  position: relative;
+  z-index: 1;
 }
 
 .menu-item {
@@ -122,6 +134,8 @@ html {
 /* Sidebar Footer */
 .sidebar-footer {
   padding: 12px;
+  position: relative;
+  z-index: 1;
 }
 
 .shrink-button {
@@ -137,14 +151,43 @@ html {
 }
 
 .shrink-icon {
-  width: 20px;
-  height: 20px;
-  background-color: #ffffff;
+  filter: brightness(0) invert(1);
+  opacity: 0.7;
 }
 
 .shrink-text {
   margin-left: 12px;
   line-height: 21px;
+}
+
+/* Sidebar Collapsed State */
+.app-sidebar.collapsed {
+  width: 60px;
+}
+
+.app-sidebar.collapsed .menu-text,
+.app-sidebar.collapsed .shrink-text {
+  display: none;
+}
+
+.app-sidebar.collapsed .sidebar-bg-image {
+  width: 60px;
+  background-size: cover;
+  background-position: center;
+}
+
+.app-sidebar.collapsed .menu-item {
+  width: 36px;
+  justify-content: center;
+}
+
+.app-sidebar.collapsed .shrink-button {
+  width: 36px;
+  justify-content: center;
+}
+
+.app-sidebar.collapsed .shrink-button .icon-left {
+  transform: rotate(180deg);
 }
 
 /* Main Content Area */
@@ -484,6 +527,29 @@ html {
 /* Candidate Name */
 .candidate-name {
   gap: 8px;
+}
+
+.candidate-name-cell {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.candidate-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.candidate-avatar-initials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 600;
 }
 
 .avatar {

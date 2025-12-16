@@ -73,12 +73,10 @@
 }
 
 /* Sidebar */
-
-/* Chua su ly */
 .icon-sidebar-background {
   background: url("../icons/icon-sidebar-background.svg") no-repeat;
-  width: 199px;
-  height: 49px;
+  width: 233px;
+  height: 827px;
 }
 
 .icon-sidebar-jobs {
