@@ -154,9 +154,9 @@
   margin-left: 4px;
 }
 
-input[type='date']::-webkit-calendar-picker-indicator {
+input[type="date"]::-webkit-calendar-picker-indicator {
   opacity: 0;
-  cursor: pointer;  
+  cursor: pointer;
 }
 
 .modal-add-candidate-date-input {
@@ -197,6 +197,7 @@ input[type='date']::-webkit-calendar-picker-indicator {
 .modal-add-candidate-select-icon {
   width: 32px;
   height: 30px;
+  border-left: 1px solid #dddde4;
 }
 
 .modal-add-candidate-area-wrapper {
@@ -244,6 +245,54 @@ input[type='date']::-webkit-calendar-picker-indicator {
 .modal-add-candidate-education {
   border-bottom: 1px solid #e0e0e0;
   padding-bottom: 16px;
+}
+
+.modal-add-candidate-education-list {
+  list-style: none;
+  padding-left: 10px;
+  margin: 0;
+}
+
+.modal-add-candidate-education-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.modal-add-candidate-education-item::before {
+  content: "•";
+  color: #1e2633;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.modal-add-candidate-education-item-label {
+  min-width: 120px;
+  line-height: 25px;
+}
+
+.modal-add-candidate-education-item-input {
+  gap: 0;
+}
+
+.modal-add-candidate-education-item-input .modal-add-candidate-select {
+  border-radius: 3px 0 0 3px;
+}
+
+.modal-add-candidate-education-btn {
+  width: 34px;
+  height: 32px;
+  background-color: transparent;
+}
+
+.modal-add-candidate-education-btn:hover {
+  background-color: #f5f9ff;
+}
+
+.modal-add-candidate-education-btn .modal-add-candidate-icon-plus {
+  width: 12px;
+  height: 12px;
 }
 
 .modal-add-candidate-education-row {
