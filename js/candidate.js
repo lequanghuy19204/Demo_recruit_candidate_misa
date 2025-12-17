@@ -129,31 +129,36 @@ function saveCandidateForm() {
   const formData = getCandidateFormData();
 
   if (!formData.fullName || !formData.applicationDate) {
-    alert("Please fill in all required fields.");
+    showToast("Please fill in all required fields.", ToastType.ERROR);
     return false;
   }
 
-  if (editingCandidateId) {
-    // Edit mode
-    const index = candidates.findIndex((c) => c.id === editingCandidateId);
-    if (index !== -1) {
-      formData.id = editingCandidateId;
-      formData.createAt = candidates[index].createAt;
-      candidates[index] = formData;
+  try {
+    if (editingCandidateId) {
+      // Edit mode
+      const index = candidates.findIndex((c) => c.id === editingCandidateId);
+      if (index !== -1) {
+        formData.id = editingCandidateId;
+        formData.createAt = candidates[index].createAt;
+        candidates[index] = formData;
+      }
+      showToast("Candidate updated successfully!", ToastType.SUCCESS);
+    } else {
+      // Add mode
+      candidates.push(formData);
+      showToast("Candidate added successfully!", ToastType.SUCCESS);
     }
-    alert("Candidate updated successfully!");
-  } else {
-    // Add mode
-    candidates.push(formData);
-    alert("Candidate added successfully!");
-  }
 
-  localStorage.setItem("candidates", JSON.stringify(candidates));
-  renderCandidateTable();
-  resetCandidateForm();
-  editingCandidateId = null;
-  closeModal();
-  return true;
+    localStorage.setItem("candidates", JSON.stringify(candidates));
+    renderCandidateTable();
+    resetCandidateForm();
+    editingCandidateId = null;
+    closeModal();
+    return true;
+  } catch (error) {
+    showToast("An error occurred. Please try again.", ToastType.ERROR);
+    return false;
+  }
 }
 
 // Delete candidate
