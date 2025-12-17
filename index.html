@@ -254,6 +254,55 @@
             </div>
           </div>
 
+          <!-- Selection Toolbar (hidden by default) -->
+          <div class="selection-toolbar commons-flex-between commons-bg-white">
+            <div class="selection-info commons-flex-center">
+              <span class="selection-count commons-fw-700">0</span>
+              <span class="selection-text commons-fs-14">selecting</span>
+              <a class="selection-deselect commons-pointer commons-fs-14"
+                >Deselect</a
+              >
+              <a class="selection-select-all commons-pointer commons-fs-14"
+                >Select all on the list</a
+              >
+            </div>
+            <div class="selection-actions commons-flex-center">
+              <button
+                class="toolbar-btn commons-flex-center commons-pointer commons-border-none commons-bg-transparent"
+              >
+                <span class="icon-email"></span>
+                <span class="commons-fs-14">Send email</span>
+              </button>
+              <button
+                class="toolbar-btn commons-flex-center commons-pointer commons-border-none commons-bg-transparent"
+              >
+                <span class="icon-tag"></span>
+                <span class="commons-fs-14">Manage tag</span>
+              </button>
+              <button
+                class="toolbar-btn commons-flex-center commons-pointer commons-border-none commons-bg-transparent"
+              >
+                <span class="icon-task"></span>
+                <span class="commons-fs-14">Create task</span>
+              </button>
+              <button
+                class="toolbar-btn commons-flex-center commons-pointer commons-border-none commons-bg-transparent"
+              >
+                <span class="icon-campaign"></span>
+                <span class="commons-fs-14">Add to campaign</span>
+              </button>
+              <button
+                class="toolbar-btn toolbar-btn-delete commons-flex-center commons-pointer commons-border-none commons-bg-transparent"
+              >
+                <span
+                  class="icon-delete"
+                  style="width: 20px; height: 20px"
+                ></span>
+                <span class="commons-fs-14">Delete</span>
+              </button>
+            </div>
+          </div>
+
           <!-- Table Section -->
           <div
             class="table-container commons-flex-1 commons-overflow-hidden commons-flex-col"
@@ -1123,6 +1172,7 @@
     <script src="js/modal.js"></script>
     <script src="js/dropdown.js"></script>
     <script src="js/pagination.js"></script>
+    <script src="js/selection-toolbar.js"></script>
     <script src="js/table.js"></script>
     <script src="js/script.js"></script>
   </body>

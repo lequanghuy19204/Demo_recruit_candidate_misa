@@ -91,6 +91,18 @@ function renderCandidateTable(list) {
       `;
     tbody.appendChild(tr);
   });
+
+  // Reset header checkbox and hide selection toolbar
+  const headerCheckbox = document.querySelector(
+    ".candidates-table thead .col-checkbox input"
+  );
+  if (headerCheckbox) {
+    headerCheckbox.checked = false;
+    headerCheckbox.indeterminate = false;
+  }
+  if (typeof SelectionToolbar !== "undefined") {
+    SelectionToolbar.hideToolbar();
+  }
 }
 
 function searchCandidates(query) {
@@ -159,6 +171,9 @@ headerCheckbox.addEventListener("change", function () {
   rowCheckboxes.forEach((checkbox) => {
     checkbox.checked = this.checked;
   });
+  if (typeof SelectionToolbar !== "undefined") {
+    SelectionToolbar.updateToolbar();
+  }
 });
 
 document.addEventListener("change", function (e) {

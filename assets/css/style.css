@@ -241,6 +241,58 @@ html {
 .filter-section {
   padding: 16px;
   margin-bottom: 0;
+  border-bottom: 1px solid #e0e6ec;
+}
+
+/* Selection Toolbar */
+.selection-toolbar {
+  display: none;
+  padding: 15px;
+  min-height: 64px;
+  border-bottom: 1px solid #e0e6ec;
+}
+
+.selection-info {
+  gap: 8px;
+}
+
+.selection-count {
+  font-size: 16px;
+  color: #2563eb;
+}
+
+.selection-text {
+  color: #5d5d5d;
+  margin-right: 8px;
+}
+
+.selection-deselect,
+.selection-select-all {
+  color: #2563eb;
+  text-decoration: none;
+  margin: 0 8px;
+}
+
+.selection-deselect:hover,
+.selection-select-all:hover {
+  text-decoration: underline;
+}
+
+.selection-actions {
+  gap: 8px;
+}
+
+.toolbar-btn {
+  padding: 8px 12px;
+  gap: 6px;
+  border-radius: 4px;
+  border: 1px solid #e0e6ec;
+  color: #1f1f1f;
+  transition: background-color 0.2s;
+}
+
+.toolbar-btn:hover {
+  background-color: #f2f2f2;
 }
 
 .search-box {
@@ -306,6 +358,9 @@ html {
   color: #1e2633;
   padding: 14px 8px;
   border-bottom: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  position: sticky;
+  top: 0;
 }
 
 .candidates-table td {

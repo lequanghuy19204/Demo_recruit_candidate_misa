@@ -206,6 +206,30 @@
   height: 16px;
 }
 
+.icon-email {
+  background: url("../icons/ICON.svg") no-repeat -260px -656px;
+  width: 20px;
+  height: 20px;
+}
+
+.icon-tag {
+  background: url("../icons/ICON.svg") no-repeat -300px -656px;
+  width: 20px;
+  height: 20px;
+}
+
+.icon-task {
+  background: url("../icons/ICON.svg") no-repeat -340px -656px;
+  width: 20px;
+  height: 20px;
+}
+
+.icon-campaign {
+  background: url("../icons/ICON.svg") no-repeat -73px -633px;
+  width: 22px;
+  height: 20px;
+}
+
 /* Modal */
 .icon-close-modal {
   background: url("../icons/ICON.svg") no-repeat -77px -141px;

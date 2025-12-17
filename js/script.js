@@ -14,6 +14,13 @@ document.addEventListener("click", function (e) {
       openModalForEdit(candidate);
     }
   }
+
+  // Toolbar delete button (bulk delete)
+  const toolbarDeleteBtn = e.target.closest(".toolbar-btn-delete");
+  if (toolbarDeleteBtn) {
+    const selectedIds = SelectionToolbar.getSelectedIds();
+    deleteMultipleCandidates(selectedIds);
+  }
 });
 
 document

@@ -148,7 +148,7 @@ function saveCandidateForm() {
     }
 
     localStorage.setItem("candidates", JSON.stringify(candidates));
-    Pagination.setData(candidates); 
+    Pagination.setData(candidates);
     resetCandidateForm();
     editingCandidateId = null;
     closeModal();
@@ -163,6 +163,20 @@ function deleteCandidate(id) {
   if (confirm("Are you sure you want to delete this candidate?")) {
     candidates = candidates.filter((c) => c.id !== id);
     localStorage.setItem("candidates", JSON.stringify(candidates));
-    Pagination.setData(candidates); 
+    Pagination.setData(candidates);
+  }
+}
+
+// Delete multiple candidates
+function deleteMultipleCandidates(ids) {
+  if (!ids || ids.length === 0) return;
+
+  const count = ids.length;
+  if (confirm(`Are you sure you want to delete ${count} candidate(s)?`)) {
+    candidates = candidates.filter((c) => !ids.includes(c.id));
+    localStorage.setItem("candidates", JSON.stringify(candidates));
+    Pagination.setData(candidates);
+    SelectionToolbar.deselectAll();
+    showToast(`${count} candidate(s) deleted successfully!`, ToastType.SUCCESS);
   }
 }
