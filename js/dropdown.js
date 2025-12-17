@@ -46,7 +46,6 @@ document.addEventListener("click", function () {
   dropdownSelects.forEach((select) => select.classList.remove("active"));
 });
 
-// Date input with calendar icon
 const dateInputs = document.querySelectorAll(
   ".modal-add-candidate-date-input input"
 );

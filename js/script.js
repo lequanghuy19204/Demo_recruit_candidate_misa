@@ -1,6 +1,4 @@
 // Main script - Event listeners and initialization
-
-// Event delegation for edit and delete buttons
 document.addEventListener("click", function (e) {
   const deleteBtn = e.target.closest(".action-btn-delete");
   if (deleteBtn) {
@@ -18,15 +16,12 @@ document.addEventListener("click", function (e) {
   }
 });
 
-// Save button
 document
   .querySelector(".modal-add-candidate-btn-save")
   .addEventListener("click", saveCandidateForm);
 
-// Load candidates on page load
 window.addEventListener("load", loadCandidates);
 
-// Sidebar toggle
 const sidebar = document.querySelector(".app-sidebar");
 const shrinkBtn = document.querySelector(".shrink-button");
 const shrinkIcon = shrinkBtn.querySelector(".icon-left");

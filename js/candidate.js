@@ -6,13 +6,13 @@ function loadCandidates() {
   const saved = localStorage.getItem("candidates");
   if (saved) {
     candidates = JSON.parse(saved);
-    renderCandidateTable();
   }
+  initPagination();
 }
 
 function getDropdownValue(elementId) {
   const el = document.getElementById(elementId);
-  return el.classList.contains("has-value") ? el.textContent : "";
+  return el.classList.contains("has-value") ? el.textContent.trim() : "";
 }
 
 function setDropdownValue(elementId, value) {
@@ -135,7 +135,6 @@ function saveCandidateForm() {
 
   try {
     if (editingCandidateId) {
-      // Edit mode
       const index = candidates.findIndex((c) => c.id === editingCandidateId);
       if (index !== -1) {
         formData.id = editingCandidateId;
@@ -144,13 +143,12 @@ function saveCandidateForm() {
       }
       showToast("Candidate updated successfully!", ToastType.SUCCESS);
     } else {
-      // Add mode
       candidates.push(formData);
       showToast("Candidate added successfully!", ToastType.SUCCESS);
     }
 
     localStorage.setItem("candidates", JSON.stringify(candidates));
-    renderCandidateTable();
+    Pagination.setData(candidates); 
     resetCandidateForm();
     editingCandidateId = null;
     closeModal();
@@ -161,11 +159,10 @@ function saveCandidateForm() {
   }
 }
 
-// Delete candidate
 function deleteCandidate(id) {
   if (confirm("Are you sure you want to delete this candidate?")) {
     candidates = candidates.filter((c) => c.id !== id);
     localStorage.setItem("candidates", JSON.stringify(candidates));
-    renderCandidateTable();
+    Pagination.setData(candidates); 
   }
 }

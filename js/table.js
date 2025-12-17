@@ -7,7 +7,16 @@ function getInitials(fullName) {
 }
 
 function getAvatarColor(name) {
-  const colors = ["#2680eb", "#e91e63", "#9c27b0", "#673ab7", "#3f51b5", "#009688", "#ff5722", "#795548"];
+  const colors = [
+    "#2680eb",
+    "#e91e63",
+    "#9c27b0",
+    "#673ab7",
+    "#3f51b5",
+    "#009688",
+    "#ff5722",
+    "#795548",
+  ];
   let hash = 0;
   for (let i = 0; i < (name || "").length; i++) {
     hash = name.charCodeAt(i) + ((hash << 5) - hash);
@@ -15,7 +24,6 @@ function getAvatarColor(name) {
   return colors[Math.abs(hash) % colors.length];
 }
 
-// Render table với danh sách truyền vào (mặc định là candidates)
 function renderCandidateTable(list) {
   const data = list || candidates;
   const tbody = document.querySelector(".candidates-table tbody");
@@ -35,7 +43,9 @@ function renderCandidateTable(list) {
 
     tr.innerHTML = `
         <td class="col-checkbox"><input type="checkbox" /></td>
-        <td class="col-fullname"><div class="candidate-name-cell">${avatarHtml}<span>${displayValue(candidate.fullName)}</span></div></td>
+        <td class="col-fullname"><div class="candidate-name-cell">${avatarHtml}<span>${displayValue(
+      candidate.fullName
+    )}</span></div></td>
         <td class="col-email">${displayValue(candidate.email)}</td>
         <td class="col-phone">${displayValue(candidate.phone)}</td>
         <td class="col-campaign">--</td>
@@ -49,7 +59,9 @@ function renderCandidateTable(list) {
         <td class="col-place">${displayValue(candidate.trainingPlace)}</td>
         <td class="col-major">${displayValue(candidate.major)}</td>
         <td class="col-workplace">${displayValue(candidate.workplace)}</td>
-        <td class="col-recommend">${displayValue(candidate.recommendingStaff)}</td>
+        <td class="col-recommend">${displayValue(
+          candidate.recommendingStaff
+        )}</td>
         <td class="col-department">--</td>
         <td class="col-compat">--</td>
         <td class="col-area">${displayValue(candidate.area)}</td>
@@ -68,32 +80,27 @@ function renderCandidateTable(list) {
         <td class="col-offer">--</td>
         <td class="col-actions">
           <div class="action-buttons">
-            <button class="action-btn-edit" data-id="${candidate.id}"><span class="icon-edit"></span></button>
-            <button class="action-btn-delete" data-id="${candidate.id}"><span class="icon-delete"></span></button>
+            <button class="action-btn-edit" data-id="${
+              candidate.id
+            }"><span class="icon-edit"></span></button>
+            <button class="action-btn-delete" data-id="${
+              candidate.id
+            }"><span class="icon-delete"></span></button>
           </div>
         </td>
       `;
     tbody.appendChild(tr);
   });
-  updateCandidateCount(data.length);
 }
 
-function updateCandidateCount(count) {
-  const totalCountEl = document.querySelector(".total-records strong");
-  if (totalCountEl) {
-    totalCountEl.textContent = count !== undefined ? count : candidates.length;
-  }
-}
-
-// Search functionality
 function searchCandidates(query) {
   const searchTerm = query.toLowerCase().trim();
-  
+
   if (!searchTerm) {
-    renderCandidateTable(candidates);
+    Pagination.setData(candidates);
     return;
   }
-  
+
   const filtered = candidates.filter((candidate) => {
     const searchableFields = [
       candidate.fullName,
@@ -113,18 +120,27 @@ function searchCandidates(query) {
       candidate.workplace,
       candidate.jobPosition,
       candidate.taskDescription,
-      candidate.dateOfBirth
+      candidate.dateOfBirth,
     ];
-    
-    return searchableFields.some((field) => 
-      field && field.toString().toLowerCase().includes(searchTerm)
+
+    return searchableFields.some(
+      (field) => field && field.toString().toLowerCase().includes(searchTerm)
     );
   });
-  
-  renderCandidateTable(filtered);
+
+  Pagination.setData(filtered);
 }
 
-// Search input event listener
+function initPagination() {
+  Pagination.init({
+    renderCallback: renderCandidateTable,
+  });
+
+  if (typeof candidates !== "undefined") {
+    Pagination.setData(candidates);
+  }
+}
+
 const searchInput = document.querySelector(".filter-search-input");
 if (searchInput) {
   searchInput.addEventListener("input", function (e) {
@@ -132,7 +148,6 @@ if (searchInput) {
   });
 }
 
-// Select all checkbox
 const headerCheckbox = document.querySelector(
   ".candidates-table thead .col-checkbox input"
 );
@@ -146,7 +161,6 @@ headerCheckbox.addEventListener("change", function () {
   });
 });
 
-// Update header checkbox when row checkboxes change
 document.addEventListener("change", function (e) {
   if (e.target.matches(".candidates-table tbody .col-checkbox input")) {
     const rowCheckboxes = document.querySelectorAll(
